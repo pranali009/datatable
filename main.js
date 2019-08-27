@@ -19,14 +19,11 @@ $(document).ready(function () {
 						$('#labelbox .modal-body').html('No Labels yet');
 					} else {
 						var res = $.parseJSON(response);
-
+						$('#labelbox .modal-body').html("");
 						$('#labelbox').modal('show');
 						$.each(res, function (key, data) {
-							console.log(key)
 							$('#labelbox .modal-body').append('<span><b>' + key + '.' + '</b></span>');
 							$.each(data, function (index, data) {
-								// console.log('index', data)
-								console.log(index + ':' + data)
 								$('#labelbox .modal-body').append('<div>' + index + ':' + data + '</div>');
 							})
 							$('#labelbox .modal-body').append('<br>');
