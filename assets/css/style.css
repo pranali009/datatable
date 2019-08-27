@@ -22,3 +22,9 @@ table.dataTable tbody td {
 .err {
   padding-bottom: 5px;
 }
+td a {
+	cursor: pointer;
+}
+tr td:first-child {
+	cursor: pointer;
+}
